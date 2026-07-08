@@ -468,7 +468,7 @@ function SectionPlans() {
     },
     {
       name: "Empresarial", price: 997, desc: "Operações de alta demanda.",
-      features: ["10 WhatsApps", "Atendentes ilimitados", "10 agentes IA", "Mensagens ilimitadas", "Áudios ilimitados", "Histórico 12 meses", "Relatórios avançados", "Integrações", "Prioridade no suporte"],
+      features: ["10 WhatsApps", "Atendentes ilimitados", "10 agentes IA", "Mensagens ilimitadas", "Áudios ilimitados", "Histórico 12 meses", "Transferência humano ↔ IA", "Relatórios avançados", "Integrações", "Prioridade no suporte"],
       cta: "Falar com especialista", featured: false,
     },
   ];
