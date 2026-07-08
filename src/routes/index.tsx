@@ -458,12 +458,12 @@ function SectionPlans() {
   const plans = [
     {
       name: "Start", price: 297, desc: "Ideal para quem está começando.",
-      features: ["1 WhatsApp", "2 atendentes humanos", "1 agente IA", "2.000 mensagens de ia /mês", "500 áudios transcritos/mês", "Histórico 3 meses", "Respostas rápidas", "Resumo automático", "Base de conhecimento personalizada", "Transferência humano ↔ IA"],
+      features: ["1 WhatsApp", "2 atendentes humanos", "1 agente IA", "2.000 mensagens de ia /mês", "500 áudios transcritos/mês", "Histórico 3 meses", "Respostas rápidas", "Resumo automático", "Transferência humano ↔ IA"],
       cta: "Começar agora", featured: false,
     },
     {
       name: "Profissional", price: 597, desc: "Para operações em crescimento.",
-      features: ["3 WhatsApps", "5 atendentes humanos", "3 agentes IA", "6.000 mensagens de ia /mês", "1.500 áudios transcritos/mês", "Histórico 6 meses", "Resumo automático", "Base de conhecimento", "Relatórios básicos"],
+      features: ["3 WhatsApps", "5 atendentes humanos", "3 agentes IA", "6.000 mensagens de ia /mês", "1.500 áudios transcritos/mês", "Histórico 6 meses", "Resumo automático", "Transferência humano ↔ IA", "Relatórios básicos"],
       cta: "Começar agora", featured: true,
     },
     {
