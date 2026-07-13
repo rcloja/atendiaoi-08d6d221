@@ -38,6 +38,9 @@ const FAQS = [
     q: "Posso revender?",
     a: "Sim. Temos um programa de parceiros e revendedores com comissão recorrente, white label e material de apoio.",
   },
+];
+
+
 
 
 export function FAQ() {
