@@ -31,10 +31,14 @@ const FAQS = [
     a: "Sim. Nossa equipe de suporte é brasileira, fala português e atende em horário comercial.",
   },
   {
+    q: "Como funcionam as integrações com outros canais (e-mail, Instagram, Facebook, Telegram)?",
+    a: "Os planos incluem o atendimento pelo WhatsApp. Canais adicionais como Gmail, Google Workspace, Outlook, Microsoft 365, e-mail profissional, Instagram Direct, Facebook Messenger e Telegram podem ser conectados conforme a necessidade. Conexão adicional por canal ou conta: R$ 59/mês. O valor é cobrado por conexão adicionada (por exemplo: uma conta Gmail, uma página do Facebook, um bot do Telegram), e não pelo acesso ilimitado a todas as contas de uma plataforma.",
+  },
+  {
     q: "Posso revender?",
     a: "Sim. Temos um programa de parceiros e revendedores com comissão recorrente, white label e material de apoio.",
   },
-];
+
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
