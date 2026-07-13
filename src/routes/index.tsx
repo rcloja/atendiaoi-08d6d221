@@ -3,7 +3,7 @@ import {
   Check, X, MessageSquare, Clock, Users, FileText, BarChart3, Layers, Sparkles,
   Headphones, Repeat, Zap, ShieldCheck, ArrowRight, PhoneCall, History,
   TrendingDown, Star, Handshake, Briefcase, Network, Mic, BookOpen, Plug,
-  Bot, UserCheck,
+  Bot, UserCheck, Mail, AtSign, Instagram, Facebook, Send, ShoppingBag, Store, Music2,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
