@@ -682,6 +682,9 @@ function SectionPlans() {
             </div>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm text-muted-foreground max-w-2xl mx-auto">
+          Conexão adicional por canal ou conta (Gmail, Outlook, e-mail profissional, Instagram, Facebook ou Telegram): <span className="font-semibold text-foreground">R$ 59/mês por conexão</span>. Cobrada por conta adicionada, não pelo acesso ilimitado à plataforma.
+        </p>
       </div>
     </section>
   );
