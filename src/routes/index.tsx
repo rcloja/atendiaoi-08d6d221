@@ -3,7 +3,7 @@ import {
   Check, X, MessageSquare, Clock, Users, FileText, BarChart3, Layers, Sparkles,
   Headphones, Repeat, Zap, ShieldCheck, ArrowRight, PhoneCall, History,
   TrendingDown, Star, Handshake, Briefcase, Network, Mic, BookOpen, Plug,
-  Bot, UserCheck,
+  Bot, UserCheck, Mail, AtSign, Instagram, Facebook, Send, ShoppingBag, Store, Music2,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -61,6 +61,7 @@ function Home() {
         <Section5 />
         <Section6 />
         <Section7 />
+        <SectionIntegrations />
         <Section8 />
         <Section9 />
         <SectionPlans />
@@ -453,6 +454,174 @@ function Section9() {
   );
 }
 
+/* ---------------- INTEGRATIONS ---------------- */
+function SectionIntegrations() {
+  const available = [
+    {
+      icon: Mail,
+      title: "Gmail e Google Workspace",
+      desc: "Conecte contas Gmail e Google Workspace para receber, analisar e responder e-mails diretamente pelo fluxo de atendimento do AtendenteAi.",
+      bullets: ["Leitura de mensagens recebidas", "Respostas pela conta conectada", "Atendimento com IA e equipe humana", "Conexão segura com autorização Google"],
+    },
+    {
+      icon: Mail,
+      title: "Outlook e Microsoft 365",
+      desc: "Conecte contas Outlook, Hotmail e Microsoft 365 para transformar e-mails recebidos em atendimentos organizados dentro do AtendenteAi.",
+      bullets: ["Leitura da caixa de entrada", "Respostas pela conta Microsoft conectada", "Atendimento centralizado", "Conexão segura com autorização Microsoft"],
+    },
+    {
+      icon: AtSign,
+      title: "E-mail profissional",
+      hint: "IMAP e SMTP",
+      desc: "Conecte e-mails profissionais do seu próprio domínio, mesmo quando não utilizam Gmail ou Microsoft 365.",
+      example: "Ex.: atendimento@suaempresa.com.br ou sac@suaempresa.com.br",
+      bullets: ["Compatível com diferentes provedores", "Recebimento de mensagens", "Envio de respostas", "Uso da conta profissional da empresa"],
+    },
+    {
+      icon: Instagram,
+      title: "Instagram Direct",
+      desc: "Receba mensagens enviadas ao Instagram da empresa e transforme conversas do Direct em atendimentos com inteligência artificial e participação humana.",
+      bullets: ["Atendimento das mensagens do Direct", "Identificação da conversa e do cliente", "Continuidade entre IA e atendente humano", "Respostas pelo canal conectado"],
+    },
+    {
+      icon: Facebook,
+      title: "Facebook Messenger",
+      desc: "Centralize as mensagens recebidas pelas páginas da empresa no Facebook e responda pelo fluxo inteligente do AtendenteAi.",
+      bullets: ["Mensagens das páginas conectadas", "Atendimento com IA e equipe humana", "Histórico e contexto da conversa", "Respostas pelo Messenger"],
+    },
+    {
+      icon: Send,
+      title: "Telegram",
+      desc: "Conecte o bot da sua empresa ao AtendenteAi para receber mensagens, atender clientes e criar fluxos de comunicação pelo Telegram.",
+      bullets: ["Bot exclusivo por empresa", "Recebimento de mensagens", "Respostas pelo próprio bot", "Atendimento automatizado e humano"],
+    },
+  ];
+
+  const upcoming = [
+    { icon: ShoppingBag, title: "Mercado Livre", desc: "Receba perguntas de compradores antes da venda e prepare respostas com inteligência artificial e supervisão da sua equipe, sem precisar alternar entre diferentes plataformas." },
+    { icon: Store, title: "Shopee", desc: "Projeto de integração para centralizar perguntas e atendimentos relacionados às vendas realizadas pela Shopee." },
+    { icon: Music2, title: "TikTok Shop", desc: "Projeto de integração para receber e organizar atendimentos relacionados a compradores, produtos e pedidos da TikTok Shop." },
+  ];
+
+  const flow = [
+    { label: "Canal conectado", icon: Plug },
+    { label: "AtendenteAi", icon: Sparkles },
+    { label: "IA e equipe humana", icon: UserCheck },
+    { label: "Resposta ao cliente", icon: MessageSquare },
+  ];
+
+  return (
+    <section id="integracoes" className="section-pad">
+      <div className="container-page">
+        <SectionHeader
+          chip="Integrações"
+          title={<>Seus canais conectados ao <span className="gradient-text">AtendenteAi.</span></>}
+          subtitle="Receba mensagens de diferentes canais em um único ambiente e permita que a inteligência artificial e sua equipe atendam com mais rapidez, contexto e organização."
+        />
+
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {available.map((c) => (
+            <div key={c.title} className="card-soft p-6 flex flex-col">
+              <div className="flex items-start justify-between gap-3">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary-soft text-primary">
+                  <c.icon size={20} />
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-success/10 text-success px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider border border-success/20">
+                  <Check size={12} /> Disponível
+                </span>
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-foreground">
+                {c.title}
+                {c.hint && <span className="ml-2 text-xs font-medium text-muted-foreground">({c.hint})</span>}
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+              {c.example && <p className="mt-2 text-xs text-muted-foreground italic">{c.example}</p>}
+              <ul className="mt-4 space-y-2 text-sm">
+                {c.bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2 text-foreground">
+                    <Check size={16} className="text-primary mt-0.5 shrink-0" /> {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-8 text-center text-sm text-muted-foreground max-w-2xl mx-auto">
+          As integrações podem ser adicionadas conforme a necessidade da sua empresa. Conexões adicionais são contratadas separadamente.
+        </p>
+
+        {/* Upcoming */}
+        <div className="mt-20">
+          <SectionHeader
+            chip="Em breve"
+            title={<>Próximas <span className="gradient-text">integrações.</span></>}
+            subtitle="Estamos trabalhando para levar o atendimento inteligente também aos principais marketplaces."
+          />
+          <div className="mt-10 grid md:grid-cols-3 gap-5">
+            {upcoming.map((c) => (
+              <div key={c.title} className="card-soft p-6 flex flex-col border-dashed">
+                <div className="flex items-start justify-between gap-3">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-muted text-muted-foreground">
+                    <c.icon size={20} />
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-warning/10 text-warning px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider border border-warning/30">
+                    <Clock size={12} /> Em desenvolvimento
+                  </span>
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">{c.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Centralized experience */}
+        <div className="mt-20 card-soft p-8 md:p-10 bg-gradient-to-br from-primary-soft to-background">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="chip">Um só lugar para atender</span>
+            <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+              Tudo o que chega, chega <span className="gradient-text">num só lugar.</span>
+            </h3>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              O cliente entra em contato pelo canal que preferir. A mensagem chega ao AtendenteAi, a inteligência artificial analisa o contexto e sua equipe pode acompanhar, complementar ou assumir o atendimento quando necessário.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-3 md:gap-4">
+            {flow.map((s, i) => (
+              <div key={s.label} className="flex items-center gap-3 md:gap-4">
+                <div className="card-soft px-4 py-4 min-w-[150px] text-center bg-background">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-soft text-primary mx-auto">
+                    <s.icon size={18} />
+                  </span>
+                  <p className="mt-2 text-sm font-semibold text-foreground">{s.label}</p>
+                </div>
+                {i < flow.length - 1 && <ArrowRight size={18} className="text-primary" />}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Commercial CTA */}
+        <div className="mt-14 max-w-3xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+            Conecte seus canais e <span className="gradient-text">responda mais rápido.</span>
+          </h3>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Reduza o tempo de resposta, mantenha o histórico organizado e permita que sua equipe trabalhe em um único ambiente.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a href="#teste" className="btn-primary">Testar grátis por 7 dias <ArrowRight size={16} /></a>
+            <a href="https://wa.me/5551996479050?text=Quero%20falar%20com%20um%20especialista%20AtendenteAi" target="_blank" rel="noreferrer" className="btn-secondary">
+              Falar com um especialista
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- PLANS ---------------- */
 function SectionPlans() {
   const plans = [
@@ -513,6 +682,9 @@ function SectionPlans() {
             </div>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm text-muted-foreground max-w-2xl mx-auto">
+          Conexão adicional por canal ou conta (Gmail, Outlook, e-mail profissional, Instagram, Facebook ou Telegram): <span className="font-semibold text-foreground">R$ 59/mês por conexão</span>. Cobrada por conta adicionada, não pelo acesso ilimitado à plataforma.
+        </p>
       </div>
     </section>
   );
