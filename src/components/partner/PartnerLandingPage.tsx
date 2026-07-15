@@ -11,7 +11,7 @@ import { PartnerLeadFormSection } from "@/components/partner/PartnerLeadFormSect
 import { PartnerFooter } from "@/components/partner/PartnerFooter";
 import { FloatingWhatsAppButton } from "@/components/partner/FloatingWhatsAppButton";
 
-import logo from "@/assets/atendenteai-logo.png.asset.json";
+import logo from "@/assets/atendenteai-logo.png";
 
 export function PartnerLandingPage() {
   return (
@@ -19,7 +19,7 @@ export function PartnerLandingPage() {
       <header className="fixed top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur-lg">
         <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
           <a href="/" className="flex items-center gap-2">
-            <img src={logo.url} alt="AtendenteAI" className="h-8 w-auto" />
+            <img src={logo} alt="AtendenteAI" className="h-8 w-auto" />
           </a>
           <a
             href="#formulario"

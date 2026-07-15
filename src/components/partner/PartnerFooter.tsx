@@ -1,5 +1,5 @@
 import { Mail, MessageCircle } from "lucide-react";
-import logo from "@/assets/atendenteai-logo.png.asset.json";
+import logo from "@/assets/atendenteai-logo.png";
 
 export function PartnerFooter() {
   return (
@@ -7,7 +7,7 @@ export function PartnerFooter() {
       <div className="container mx-auto max-w-7xl px-4 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <img src={logo.url} alt="AtendenteAI" className="h-9 w-auto" />
+            <img src={logo} alt="AtendenteAI" className="h-9 w-auto" />
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               Inteligência artificial para atendimento empresarial no WhatsApp.
             </p>

@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/atendenteai-logo.png.asset.json";
+import logoAsset from "@/assets/atendenteai-logo.png";
 
 export function Footer() {
   return (
@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container-page py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 font-semibold">
-            <img src={logoAsset.url} alt="AtendenteAi" className="h-9 w-9 object-contain" />
+            <img src={logoAsset} alt="AtendenteAi" className="h-9 w-9 object-contain" />
             <span className="text-lg">AtendenteAi</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-md">
