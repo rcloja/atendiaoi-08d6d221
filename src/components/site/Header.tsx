@@ -30,7 +30,7 @@ export function Header() {
     >
       <div className="container-page flex items-center justify-between h-16">
         <a href="#top" className="flex items-center gap-2 font-semibold text-foreground">
-          <img src={logoAsset.url} alt="AtendenteAi" className="h-9 w-9 object-contain" />
+          <img src={logoAsset} alt="AtendenteAi" className="h-9 w-9 object-contain" />
           <span className="text-lg tracking-tight">AtendenteAi</span>
         </a>
 
