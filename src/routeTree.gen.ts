@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ParceirosRouteImport } from './routes/parceiros'
 import { Route as DocumentacaoRouteImport } from './routes/documentacao'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParceirosRoute = ParceirosRouteImport.update({
+  id: '/parceiros',
+  path: '/parceiros',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DocumentacaoRoute = DocumentacaoRouteImport.update({
@@ -32,30 +38,34 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/documentacao': typeof DocumentacaoRoute
+  '/parceiros': typeof ParceirosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/documentacao': typeof DocumentacaoRoute
+  '/parceiros': typeof ParceirosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/documentacao': typeof DocumentacaoRoute
+  '/parceiros': typeof ParceirosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/documentacao' | '/sitemap.xml'
+  fullPaths: '/' | '/documentacao' | '/parceiros' | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/documentacao' | '/sitemap.xml'
-  id: '__root__' | '/' | '/documentacao' | '/sitemap.xml'
+  to: '/' | '/documentacao' | '/parceiros' | '/sitemap.xml'
+  id: '__root__' | '/' | '/documentacao' | '/parceiros' | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DocumentacaoRoute: typeof DocumentacaoRoute
+  ParceirosRoute: typeof ParceirosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parceiros': {
+      id: '/parceiros'
+      path: '/parceiros'
+      fullPath: '/parceiros'
+      preLoaderRoute: typeof ParceirosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/documentacao': {
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DocumentacaoRoute: DocumentacaoRoute,
+  ParceirosRoute: ParceirosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
