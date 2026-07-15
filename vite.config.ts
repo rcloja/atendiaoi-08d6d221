@@ -7,6 +7,12 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    // Ensure asset URLs are absolute ("/assets/...") so they resolve on nested
+    // routes like /parceiros. Without this, Vite emits relative "assets/..."
+    // paths which 404 when the browser is on a non-root route.
+    base: "/",
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
