@@ -12,4 +12,11 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Force Nitro to build a standalone Node.js server instead of a Cloudflare Worker.
+  // Output goes to .output/server/index.mjs — run with `node .output/server/index.mjs`.
+  // Note: inside Lovable's managed build the Cloudflare preset is forced; this override
+  // takes effect on your own CI / self-hosted builds.
+  nitro: {
+    preset: "node-server",
+  },
 });
