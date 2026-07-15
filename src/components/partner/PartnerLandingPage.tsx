@@ -11,7 +11,7 @@ import { PartnerLeadFormSection } from "@/components/partner/PartnerLeadFormSect
 import { PartnerFooter } from "@/components/partner/PartnerFooter";
 import { FloatingWhatsAppButton } from "@/components/partner/FloatingWhatsAppButton";
 
-import logo from "@/assets/atendenteai-logo.png.asset.json";
+import logo from "@/assets/atendenteai-logo.png";
 
 export function PartnerLandingPage() {
   return (

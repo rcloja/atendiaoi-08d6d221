@@ -1,5 +1,5 @@
 import { Mail, MessageCircle } from "lucide-react";
-import logo from "@/assets/atendenteai-logo.png.asset.json";
+import logo from "@/assets/atendenteai-logo.png";
 
 export function PartnerFooter() {
   return (

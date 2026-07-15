@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/atendenteai-logo.png.asset.json";
+import logoAsset from "@/assets/atendenteai-logo.png";
 
 const NAV: { label: string; href: string; external?: boolean }[] = [
   { label: "Recursos", href: "/#recursos" },

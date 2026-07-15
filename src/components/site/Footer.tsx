@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/atendenteai-logo.png.asset.json";
+import logoAsset from "@/assets/atendenteai-logo.png";
 
 export function Footer() {
   return (
